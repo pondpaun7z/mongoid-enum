@@ -8,7 +8,7 @@ module Mongoid
     module ClassMethods
 
       def enum(name, values, options = {})
-        field_name = :"#{Mongoid::Enum.configuration.field_name_prefix}#{name}"
+        field_name = :"#{name}"
         options = default_options(values).merge(options)
 
         set_values_constant name, values
